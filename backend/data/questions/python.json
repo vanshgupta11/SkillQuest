@@ -1,0 +1,277 @@
+[
+  {
+    "id": 1,
+    "type": "logic",
+    "difficulty": 1,
+    "question": "Which term follows in the sequence: 5, 10, 20, 40, __?",
+    "options": ["50", "60", "80", "100"],
+    "correct": 2,
+    "explanation": "Each term is doubled (x 2)."
+  },
+  {
+    "id": 2,
+    "type": "fundamentals",
+    "difficulty": 1,
+    "question": "Which data type in Python represents an immutable ordered collection of items?",
+    "options": ["list", "tuple", "dict", "set"],
+    "correct": 1,
+    "explanation": "Tuples are immutable ordered sequences in Python."
+  },
+  {
+    "id": 3,
+    "type": "fundamentals",
+    "difficulty": 1,
+    "question": "What is the output of print(type([])) in Python 3?",
+    "options": ["<class 'list'>", "<class 'array'>", "<class 'tuple'>", "<class 'dict'>"],
+    "correct": 0,
+    "explanation": "Square brackets [] instantiate a list."
+  },
+  {
+    "id": 4,
+    "type": "logic",
+    "difficulty": 1,
+    "question": "Evaluate expression: (15 // 4) * 2 + (15 % 4)?",
+    "options": ["7", "9", "8", "10"],
+    "correct": 1,
+    "explanation": "15 // 4 = 3. 3 * 2 = 6. 15 % 4 = 3. 6 + 3 = 9."
+  },
+  {
+    "id": 5,
+    "type": "fundamentals",
+    "difficulty": 1,
+    "question": "Which keyword defines a function in Python?",
+    "options": ["func", "function", "def", "lambda"],
+    "correct": 2,
+    "explanation": "'def' keyword defines functions."
+  },
+  {
+    "id": 6,
+    "type": "fundamentals",
+    "difficulty": 1,
+    "question": "How do you start a single-line comment in Python?",
+    "options": ["//", "#", "/*", "<!--"],
+    "correct": 1,
+    "explanation": "The hash symbol '#' begins single-line comments."
+  },
+  {
+    "id": 7,
+    "type": "logic",
+    "difficulty": 1,
+    "question": "Find the missing number: 1, 4, 9, 16, 25, __?",
+    "options": ["30", "36", "49", "35"],
+    "correct": 1,
+    "explanation": "Sequence of squares: 1^2, 2^2, 3^2, 4^2, 5^2, 6^2 = 36."
+  },
+  {
+    "id": 8,
+    "type": "fundamentals",
+    "difficulty": 1,
+    "question": "What does the len() function return?",
+    "options": ["Memory size", "Number of items in an object", "Data type string", "Maximum element"],
+    "correct": 1,
+    "explanation": "len() returns the item count of a sequence or container."
+  },
+  {
+    "id": 9,
+    "type": "fundamentals",
+    "difficulty": 1,
+    "question": "Which of the following is NOT a built-in Python data type?",
+    "options": ["dict", "set", "linkedlist", "bool"],
+    "correct": 2,
+    "explanation": "linkedlist is not a native primitive type in Python."
+  },
+  {
+    "id": 10,
+    "type": "logic",
+    "difficulty": 1,
+    "question": "If X=3, Y=6, Z=9, what is Z - (Y / X)?",
+    "options": ["7", "6", "5", "8"],
+    "correct": 0,
+    "explanation": "9 - (6 / 3) = 9 - 2 = 7."
+  },
+  {
+    "id": 11,
+    "type": "fundamentals",
+    "difficulty": 2,
+    "question": "What is the time complexity of looking up a key in a Python dict on average?",
+    "options": ["O(N)", "O(log N)", "O(1)", "O(N^2)"],
+    "correct": 2,
+    "explanation": "Hash tables provide O(1) average lookup."
+  },
+  {
+    "id": 12,
+    "type": "fundamentals",
+    "difficulty": 2,
+    "question": "What does list slicing lst[::-1] produce?",
+    "options": ["First element", "Reversed list", "Empty list", "SyntaxError"],
+    "correct": 1,
+    "explanation": "A negative step of -1 reverses the sequence."
+  },
+  {
+    "id": 13,
+    "type": "logic",
+    "difficulty": 2,
+    "question": "Fibonacci progression: 0, 1, 1, 2, 3, 5, 8, __?",
+    "options": ["11", "13", "15", "10"],
+    "correct": 1,
+    "explanation": "Sum of two preceding terms: 5 + 8 = 13."
+  },
+  {
+    "id": 14,
+    "type": "fundamentals",
+    "difficulty": 2,
+    "question": "What decorator is used in Python to define a method bound to the class rather than instances?",
+    "options": ["@staticmethod", "@classmethod", "@property", "@abstractmethod"],
+    "correct": 1,
+    "explanation": "@classmethod receives 'cls' as first argument."
+  },
+  {
+    "id": 15,
+    "type": "fundamentals",
+    "difficulty": 2,
+    "question": "What does a generator function return when called?",
+    "options": ["List", "Generator iterator object", "Tuple", "None"],
+    "correct": 1,
+    "explanation": "Functions containing 'yield' return generator iterators."
+  },
+  {
+    "id": 16,
+    "type": "logic",
+    "difficulty": 2,
+    "question": "Given list [1, 2, 3, 4], list comprehension [x*2 for x in lst if x % 2 == 0] yields?",
+    "options": ["[2, 4, 6, 8]", "[4, 8]", "[2, 6]", "[4]"],
+    "correct": 1,
+    "explanation": "Even numbers are 2 and 4. Doubled: 4 and 8."
+  },
+  {
+    "id": 17,
+    "type": "fundamentals",
+    "difficulty": 2,
+    "question": "What is GIL in Python?",
+    "options": ["Global Interpreter Lock", "General Interface Language", "Graphical Integration Layer", "Garbage Index List"],
+    "correct": 0,
+    "explanation": "GIL ensures only one thread executes Python bytecode at a time."
+  },
+  {
+    "id": 18,
+    "type": "fundamentals",
+    "difficulty": 2,
+    "question": "How are keyword arguments passed as a dictionary inside a function definition?",
+    "options": ["*args", "**kwargs", "&args", "dict_args"],
+    "correct": 1,
+    "explanation": "**kwargs captures keyword arguments into a dict."
+  },
+  {
+    "id": 19,
+    "type": "logic",
+    "difficulty": 2,
+    "question": "Logical truth table: bool(0) or bool('False') evaluates to?",
+    "options": ["False", "True", "None", "Error"],
+    "correct": 1,
+    "explanation": "bool(0) is False, but bool('False') is True because non-empty string is truthy."
+  },
+  {
+    "id": 20,
+    "type": "fundamentals",
+    "difficulty": 2,
+    "question": "Which module in Python standard library handles JSON serialization?",
+    "options": ["marshal", "pickle", "json", "yaml"],
+    "correct": 2,
+    "explanation": "The 'json' module provides dumps() and loads()."
+  },
+  {
+    "id": 21,
+    "type": "fundamentals",
+    "difficulty": 3,
+    "question": "What is the difference between deepcopy and shallow copy in Python's copy module?",
+    "options": [
+      "Shallow copy duplicates nested objects recursively",
+      "Deepcopy creates independent copies of nested compound objects, shallow copies reference inner objects",
+      "There is no difference",
+      "Shallow copy works only on tuples"
+    ],
+    "correct": 1,
+    "explanation": "deepcopy recursively copies all nested objects."
+  },
+  {
+    "id": 22,
+    "type": "fundamentals",
+    "difficulty": 3,
+    "question": "What special method implements context manager protocol for 'with' statements?",
+    "options": ["__init__ and __del__", "__enter__ and __exit__", "__open__ and __close__", "__start__ and __stop__"],
+    "correct": 1,
+    "explanation": "__enter__ and __exit__ handle context management."
+  },
+  {
+    "id": 23,
+    "type": "logic",
+    "difficulty": 3,
+    "question": "If fun(n) = n * fun(n-1) for n > 1 and fun(1) = 1, what is fun(5)?",
+    "options": ["60", "120", "24", "720"],
+    "correct": 1,
+    "explanation": "Factorial of 5: 5 * 4 * 3 * 2 * 1 = 120."
+  },
+  {
+    "id": 24,
+    "type": "fundamentals",
+    "difficulty": 3,
+    "question": "What is the output of isinstance(True, int) in Python?",
+    "options": ["False", "True", "TypeError", "SyntaxError"],
+    "correct": 1,
+    "explanation": "In Python, bool is a subclass of int (True == 1)."
+  },
+  {
+    "id": 25,
+    "type": "logic",
+    "difficulty": 3,
+    "question": "Set operations: A = {1, 2, 3}, B = {3, 4, 5}. What is len(A ^ B)?",
+    "options": ["1", "2", "4", "5"],
+    "correct": 2,
+    "explanation": "Symmetric difference A ^ B = {1, 2, 4, 5}. Length = 4."
+  },
+  {
+    "id": 26,
+    "type": "fundamentals",
+    "difficulty": 3,
+    "question": "How does Python handle memory management for small integers and strings?",
+    "options": ["Garbage collector destroys immediately", "Interning / caching small objects", "Virtual memory swap", "Disk caching"],
+    "correct": 1,
+    "explanation": "Python interns small integers (-5 to 256) and some strings for reuse."
+  },
+  {
+    "id": 27,
+    "type": "fundamentals",
+    "difficulty": 3,
+    "question": "What metaclass controls class creation in Python?",
+    "options": ["type", "object", "MetaClass", "base"],
+    "correct": 0,
+    "explanation": "'type' is the default metaclass of all classes."
+  },
+  {
+    "id": 28,
+    "type": "logic",
+    "difficulty": 3,
+    "question": "Expression: list(map(lambda x: x**2, filter(lambda x: x % 2 != 0, range(5)))) results in?",
+    "options": ["[1, 9]", "[0, 4, 16]", "[1, 3]", "[0, 1, 4, 9, 16]"],
+    "correct": 0,
+    "explanation": "range(5) odd numbers: 1, 3. Squared: 1, 9."
+  },
+  {
+    "id": 29,
+    "type": "fundamentals",
+    "difficulty": 3,
+    "question": "In asyncio, what keyword pauses execution until an awaitable object returns?",
+    "options": ["yield", "async", "await", "wait"],
+    "correct": 2,
+    "explanation": "'await' pauses coroutine execution for async results."
+  },
+  {
+    "id": 30,
+    "type": "fundamentals",
+    "difficulty": 3,
+    "question": "What is the purpose of sys.setrecursionlimit()?",
+    "options": ["Increase thread pool", "Modify maximum call stack depth for recursive functions", "Limit memory usage", "Prevent file I/O"],
+    "correct": 1,
+    "explanation": "Configures Python interpreter stack limit to avoid recursion overflow."
+  }
+]

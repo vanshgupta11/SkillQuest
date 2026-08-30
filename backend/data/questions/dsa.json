@@ -1,0 +1,277 @@
+[
+  {
+    "id": 1,
+    "type": "logic",
+    "difficulty": 1,
+    "question": "Which term fills the gap: 100, 50, 25, 12.5, __?",
+    "options": ["6.25", "6", "5", "3.125"],
+    "correct": 0,
+    "explanation": "Halving each term (x 0.5)."
+  },
+  {
+    "id": 2,
+    "type": "fundamentals",
+    "difficulty": 1,
+    "question": "What is the worst-case time complexity of accessing an element by index in an Array?",
+    "options": ["O(1)", "O(N)", "O(log N)", "O(N^2)"],
+    "correct": 0,
+    "explanation": "Arrays provide direct O(1) indexed access."
+  },
+  {
+    "id": 3,
+    "type": "fundamentals",
+    "difficulty": 1,
+    "question": "Which data structure follows First-In, First-Out (FIFO) ordering?",
+    "options": ["Stack", "Queue", "Tree", "Graph"],
+    "correct": 1,
+    "explanation": "Queues process elements in FIFO order."
+  },
+  {
+    "id": 4,
+    "type": "logic",
+    "difficulty": 1,
+    "question": "If Stack operations are PUSH(A), PUSH(B), POP(), PUSH(C), POP(), what remains on stack?",
+    "options": ["A", "B", "C", "Empty"],
+    "correct": 0,
+    "explanation": "Stack sequence: [A] -> [A, B] -> [A] -> [A, C] -> [A]."
+  },
+  {
+    "id": 5,
+    "type": "fundamentals",
+    "difficulty": 1,
+    "question": "Which data structure follows Last-In, First-Out (LIFO)?",
+    "options": ["Queue", "Stack", "Heap", "Hash Map"],
+    "correct": 1,
+    "explanation": "Stacks operate on LIFO."
+  },
+  {
+    "id": 6,
+    "type": "fundamentals",
+    "difficulty": 1,
+    "question": "What is the worst-case search time complexity for Binary Search on a sorted array?",
+    "options": ["O(N)", "O(log N)", "O(1)", "O(N log N)"],
+    "correct": 1,
+    "explanation": "Binary search divides search space in half each step: O(log N)."
+  },
+  {
+    "id": 7,
+    "type": "logic",
+    "difficulty": 1,
+    "question": "Pattern check: [1, 2], [2, 4], [3, 8], [4, 16], [5, __]?",
+    "options": ["20", "25", "32", "64"],
+    "correct": 2,
+    "explanation": "Second element is 2^n: 2^5 = 32."
+  },
+  {
+    "id": 8,
+    "type": "fundamentals",
+    "difficulty": 1,
+    "question": "In a singly linked list, what does each node contain?",
+    "options": ["Data and prev pointer", "Data and next pointer", "Data only", "Left and right pointers"],
+    "correct": 1,
+    "explanation": "Singly linked nodes hold payload data and a reference to the next node."
+  },
+  {
+    "id": 9,
+    "type": "fundamentals",
+    "difficulty": 1,
+    "question": "What traversal order visits Root -> Left -> Right in a Binary Tree?",
+    "options": ["In-order", "Pre-order", "Post-order", "Level-order"],
+    "correct": 1,
+    "explanation": "Pre-order visits root first, then left and right subtrees."
+  },
+  {
+    "id": 10,
+    "type": "logic",
+    "difficulty": 1,
+    "question": "If Queue elements 10, 20, 30 are ENQUEUED in order, what is DEQUEUED first?",
+    "options": ["30", "20", "10", "None"],
+    "correct": 2,
+    "explanation": "FIFO removes 10 first."
+  },
+  {
+    "id": 11,
+    "type": "fundamentals",
+    "difficulty": 2,
+    "question": "What is the average time complexity of QuickSort?",
+    "options": ["O(N^2)", "O(N log N)", "O(N)", "O(log N)"],
+    "correct": 1,
+    "explanation": "Average case of QuickSort is O(N log N)."
+  },
+  {
+    "id": 12,
+    "type": "fundamentals",
+    "difficulty": 2,
+    "question": "Which algorithm is used to find the shortest path in a weighted graph with non-negative edges?",
+    "options": ["Prim's Algorithm", "Dijkstra's Algorithm", "Kruskal's Algorithm", "Floyd-Warshall"],
+    "correct": 1,
+    "explanation": "Dijkstra finds single-source shortest paths for non-negative weights."
+  },
+  {
+    "id": 13,
+    "type": "logic",
+    "difficulty": 2,
+    "question": "Tree height: Full binary tree of depth 3 has how many max leaves?",
+    "options": ["4", "8", "16", "7"],
+    "correct": 1,
+    "explanation": "Max leaves at depth 3 is 2^3 = 8."
+  },
+  {
+    "id": 14,
+    "type": "fundamentals",
+    "difficulty": 2,
+    "question": "What collision resolution technique uses linked lists for bucket overflow in Hash Tables?",
+    "options": ["Linear Probing", "Separate Chaining", "Double Hashing", "Quadratic Probing"],
+    "correct": 1,
+    "explanation": "Separate chaining stores collisions in linked lists at each bucket."
+  },
+  {
+    "id": 15,
+    "type": "fundamentals",
+    "difficulty": 2,
+    "question": "Which property defines a Max-Heap?",
+    "options": ["Parent key >= child keys", "Parent key <= child keys", "Left child < parent < right child", "All nodes have equal depth"],
+    "correct": 0,
+    "explanation": "Max-heap property mandates parent values are >= their children."
+  },
+  {
+    "id": 16,
+    "type": "logic",
+    "difficulty": 2,
+    "question": "Evaluating postfix expression: 3 4 + 2 * yields?",
+    "options": ["14", "11", "9", "24"],
+    "correct": 0,
+    "explanation": "(3 + 4) * 2 = 7 * 2 = 14."
+  },
+  {
+    "id": 17,
+    "type": "fundamentals",
+    "difficulty": 2,
+    "question": "What is space complexity of Breadth-First Search (BFS) on a graph in terms of max width W?",
+    "options": ["O(1)", "O(W)", "O(V + E)", "O(V^2)"],
+    "correct": 1,
+    "explanation": "Queue stores frontier nodes up to max width W."
+  },
+  {
+    "id": 18,
+    "type": "fundamentals",
+    "difficulty": 2,
+    "question": "Which algorithm technique does MergeSort employ?",
+    "options": ["Greedy Approach", "Divide and Conquer", "Dynamic Programming", "Backtracking"],
+    "correct": 1,
+    "explanation": "MergeSort splits arrays recursively and merges sorted halves."
+  },
+  {
+    "id": 19,
+    "type": "logic",
+    "difficulty": 2,
+    "question": "Array elements [5, 1, 4, 2, 8]. After 1 pass of Bubble Sort, what is the rightmost element?",
+    "options": ["5", "4", "8", "2"],
+    "correct": 2,
+    "explanation": "First pass of bubble sort moves largest element (8) to the end."
+  },
+  {
+    "id": 20,
+    "type": "fundamentals",
+    "difficulty": 2,
+    "question": "What problem does Bellman-Ford algorithm solve that Dijkstra cannot?",
+    "options": ["Unweighted graph paths", "Graphs with negative edge weights", "Minimum spanning trees", "Topological sorting"],
+    "correct": 1,
+    "explanation": "Bellman-Ford handles negative edge weights and detects negative cycles."
+  },
+  {
+    "id": 21,
+    "type": "fundamentals",
+    "difficulty": 3,
+    "question": "What is the worst-case space complexity of Depth-First Search (DFS) recursion on a graph of height H?",
+    "options": ["O(H)", "O(V^2)", "O(1)", "O(V!)"],
+    "correct": 0,
+    "explanation": "Call stack depth equals max path height H."
+  },
+  {
+    "id": 22,
+    "type": "fundamentals",
+    "difficulty": 3,
+    "question": "Which self-balancing binary search tree guarantees height of O(log N) via balance factor -1, 0, +1?",
+    "options": ["B-Tree", "AVL Tree", "Red-Black Tree", "Splay Tree"],
+    "correct": 1,
+    "explanation": "AVL trees maintain strict balance factors between -1 and +1."
+  },
+  {
+    "id": 23,
+    "type": "logic",
+    "difficulty": 3,
+    "question": "Graph chromatic number: Minimum colors needed to color a complete graph K5 such that no adjacent vertices share a color?",
+    "options": ["3", "4", "5", "6"],
+    "correct": 2,
+    "explanation": "Every node connects to 4 others, needing 5 distinct colors."
+  },
+  {
+    "id": 24,
+    "type": "fundamentals",
+    "difficulty": 3,
+    "question": "What is the amortized time complexity of union and find operations in Disjoint Set (Union-Find) with path compression?",
+    "options": ["O(log N)", "O(alpha(N)) inverse Ackermann", "O(N)", "O(1) strict"],
+    "correct": 1,
+    "explanation": "Nearly constant O(alpha(N)) where alpha is inverse Ackermann function."
+  },
+  {
+    "id": 25,
+    "type": "logic",
+    "difficulty": 3,
+    "question": "DP state transition: dp[i] = dp[i-1] + dp[i-2]. If dp[0]=1, dp[1]=1, what is dp[5]?",
+    "options": ["5", "8", "13", "3"],
+    "correct": 1,
+    "explanation": "dp[0]=1, dp[1]=1, dp[2]=2, dp[3]=3, dp[4]=5, dp[5]=8."
+  },
+  {
+    "id": 26,
+    "type": "fundamentals",
+    "difficulty": 3,
+    "question": "What algorithm finds strongly connected components in a directed graph in linear time?",
+    "options": ["Tarjan's Algorithm", "Kruskal's Algorithm", "Prim's Algorithm", "A* Search"],
+    "correct": 0,
+    "explanation": "Tarjan's algorithm uses DFS to find strongly connected components in O(V+E)."
+  },
+  {
+    "id": 27,
+    "type": "fundamentals",
+    "difficulty": 3,
+    "question": "What is the optimal substructure property in Dynamic Programming?",
+    "options": [
+      "Subproblems are independent and non-overlapping",
+      "An optimal solution to the problem contains optimal solutions to its subproblems",
+      "Memory space is O(1)",
+      "Algorithms use random pivots"
+    ],
+    "correct": 1,
+    "explanation": "Optimal substructure means sub-solutions combine into overall optimal solution."
+  },
+  {
+    "id": 28,
+    "type": "logic",
+    "difficulty": 3,
+    "question": "Bitwise trick: What does (n & (n - 1)) == 0 check for integer n > 0?",
+    "options": ["n is even", "n is a power of 2", "n is prime", "n is negative"],
+    "correct": 1,
+    "explanation": "Powers of 2 have 1 set bit; n-1 flips all trailing bits, so AND yields 0."
+  },
+  {
+    "id": 29,
+    "type": "fundamentals",
+    "difficulty": 3,
+    "question": "What data structure is used to implement Topological Sort?",
+    "options": ["Queue / Stack with indegree tracking", "Min-Heap only", "AVL Tree", "Disjoint Set"],
+    "correct": 0,
+    "explanation": "Kahn's algorithm uses indegree count and a Queue/Stack."
+  },
+  {
+    "id": 30,
+    "type": "fundamentals",
+    "difficulty": 3,
+    "question": "What is the time complexity of building a heap from an unsorted array of N elements?",
+    "options": ["O(N log N)", "O(N)", "O(N^2)", "O(log N)"],
+    "correct": 1,
+    "explanation": "Build-Heap using bottom-up heapify takes O(N) linear time."
+  }
+]

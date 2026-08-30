@@ -1,0 +1,272 @@
+[
+  {
+    "id": 1,
+    "type": "logic",
+    "difficulty": 1,
+    "question": "Which ratio completes the scale: 1:2, 2:4, 3:6, 4:8, 5:__?",
+    "options": ["9", "10", "12", "15"],
+    "correct": 1,
+    "explanation": "Second term is double the first term."
+  },
+  {
+    "id": 2,
+    "type": "fundamentals",
+    "difficulty": 1,
+    "question": "Which machine learning paradigm uses labeled target data during training?",
+    "options": ["Supervised Learning", "Unsupervised Learning", "Reinforcement Learning", "Self-Supervised"],
+    "correct": 0,
+    "explanation": "Supervised learning trains models on labeled input-output pairs."
+  },
+  {
+    "id": 3,
+    "type": "fundamentals",
+    "difficulty": 1,
+    "question": "What is the primary goal of Linear Regression?",
+    "options": ["Classify images", "Predict continuous numeric values", "Cluster customer segments", "Dimensionality reduction"],
+    "correct": 1,
+    "explanation": "Linear regression models continuous target variables."
+  },
+  {
+    "id": 4,
+    "type": "logic",
+    "difficulty": 1,
+    "question": "Given inputs [0, 0] -> 0, [0, 1] -> 0, [1, 0] -> 0, [1, 1] -> 1. What boolean gate is modeled?",
+    "options": ["OR", "AND", "XOR", "NAND"],
+    "correct": 1,
+    "explanation": "Outputs 1 only when both inputs are 1 (AND gate)."
+  },
+  {
+    "id": 5,
+    "type": "fundamentals",
+    "difficulty": 1,
+    "question": "Which evaluation metric measures the ratio of true positives to total actual positives?",
+    "options": ["Precision", "Recall (Sensitivity)", "Accuracy", "F1 Score"],
+    "correct": 1,
+    "explanation": "Recall = TP / (TP + FN)."
+  },
+  {
+    "id": 6,
+    "type": "fundamentals",
+    "difficulty": 1,
+    "question": "What unsupervised technique groups similar data points into clusters?",
+    "options": ["Logistic Regression", "K-Means Clustering", "Decision Tree", "Support Vector Classifier"],
+    "correct": 1,
+    "explanation": "K-Means clusters unlabeled data points based on feature similarity."
+  },
+  {
+    "id": 7,
+    "type": "logic",
+    "difficulty": 1,
+    "question": "Number pattern: 0.1, 0.2, 0.4, 0.8, __?",
+    "options": ["1.0", "1.2", "1.6", "2.0"],
+    "correct": 2,
+    "explanation": "0.8 * 2 = 1.6."
+  },
+  {
+    "id": 8,
+    "type": "fundamentals",
+    "difficulty": 1,
+    "question": "What occurs when a model performs exceptionally well on training data but fails to generalize to unseen test data?",
+    "options": ["Underfitting", "Overfitting", "Convergence", "Normalizing"],
+    "correct": 1,
+    "explanation": "Overfitting captures noise in training data, harming generalization."
+  },
+  {
+    "id": 9,
+    "type": "fundamentals",
+    "difficulty": 1,
+    "question": "Which Python library is standard for matrix operations and array processing?",
+    "options": ["Pandas", "NumPy", "Matplotlib", "Scikit-Learn"],
+    "correct": 1,
+    "explanation": "NumPy provides high-performance multi-dimensional array operations."
+  },
+  {
+    "id": 10,
+    "type": "logic",
+    "difficulty": 1,
+    "question": "Probability: What is the probability of rolling a 6 on a fair 6-sided die?",
+    "options": ["1/2", "1/6", "1/3", "1/12"],
+    "correct": 1,
+    "explanation": "One favorable outcome out of six possible sides = 1/6."
+  },
+  {
+    "id": 11,
+    "type": "fundamentals",
+    "difficulty": 2,
+    "question": "What activation function maps real numbers to probabilities between 0 and 1?",
+    "options": ["ReLU", "Sigmoid", "Leaky ReLU", "Tanh"],
+    "correct": 1,
+    "explanation": "Sigmoid output range is (0, 1)."
+  },
+  {
+    "id": 12,
+    "type": "fundamentals",
+    "difficulty": 2,
+    "question": "What is the harmonic mean of Precision and Recall?",
+    "options": ["ROC-AUC", "F1 Score", "MAE", "MSE"],
+    "correct": 1,
+    "explanation": "F1 Score = 2 * (Precision * Recall) / (Precision + Recall)."
+  },
+  {
+    "id": 13,
+    "type": "logic",
+    "difficulty": 2,
+    "question": "Matrix multiplication dimensions: Matrix A (3x2) * Matrix B (2x4) produces matrix of shape?",
+    "options": ["3x4", "2x2", "3x2", "Invalid"],
+    "correct": 0,
+    "explanation": "Inner dimensions match (2), resulting shape is (3x4)."
+  },
+  {
+    "id": 14,
+    "type": "fundamentals",
+    "difficulty": 2,
+    "question": "Which technique scales features to have mean 0 and standard deviation 1?",
+    "options": ["Min-Max Scaling", "Standardization (Z-score)", "L1 Normalization", "Binarization"],
+    "correct": 1,
+    "explanation": "Standardization subtracts mean and divides by standard deviation."
+  },
+  {
+    "id": 15,
+    "type": "fundamentals",
+    "difficulty": 2,
+    "question": "What hyperparameter in Decision Trees controls maximum depth to prevent overfitting?",
+    "options": ["max_depth", "n_estimators", "learning_rate", "criterion"],
+    "correct": 0,
+    "explanation": "max_depth limits tree growth depth."
+  },
+  {
+    "id": 16,
+    "type": "logic",
+    "difficulty": 2,
+    "question": "Given Confusion Matrix: TP=40, FP=10, FN=5, TN=45. What is Precision?",
+    "options": ["40/45 (0.888)", "40/50 (0.80)", "40/85", "45/50"],
+    "correct": 1,
+    "explanation": "Precision = TP / (TP + FP) = 40 / (40 + 10) = 40/50 = 0.80."
+  },
+  {
+    "id": 17,
+    "type": "fundamentals",
+    "difficulty": 2,
+    "question": "What does PCA (Principal Component Analysis) accomplish?",
+    "options": ["Classification", "Dimensionality reduction while preserving variance", "Hyperparameter tuning", "Text generation"],
+    "correct": 1,
+    "explanation": "PCA projects data onto principal axes to reduce dimensions."
+  },
+  {
+    "id": 18,
+    "type": "fundamentals",
+    "difficulty": 2,
+    "question": "What optimization algorithm iteratively updates parameters in the opposite direction of the gradient?",
+    "options": ["Simulated Annealing", "Gradient Descent", "Genetic Algorithm", "Grid Search"],
+    "correct": 1,
+    "explanation": "Gradient Descent minimizes loss by taking steps opposite to the gradient."
+  },
+  {
+    "id": 19,
+    "type": "logic",
+    "difficulty": 2,
+    "question": "Derivative check: What is the derivative of f(x) = x^3 - 4x with respect to x?",
+    "options": ["3x^2 - 4", "3x^2", "x^2 - 4", "3x^3 - 4"],
+    "correct": 0,
+    "explanation": "d/dx(x^3) = 3x^2, d/dx(-4x) = -4."
+  },
+  {
+    "id": 20,
+    "type": "fundamentals",
+    "difficulty": 2,
+    "question": "Which Ensemble method builds multiple independent trees in parallel and averages their predictions?",
+    "options": ["Gradient Boosting", "Random Forest", "AdaBoost", "XGBoost"],
+    "correct": 1,
+    "explanation": "Random Forest is a bagging ensemble of decision trees."
+  },
+  {
+    "id": 21,
+    "type": "fundamentals",
+    "difficulty": 3,
+    "question": "What phenomenon occurs when gradients shrink exponentially as they propagate backward through deep neural networks?",
+    "options": ["Exploding Gradient", "Vanishing Gradient", "Dead ReLU", "Mode Collapse"],
+    "correct": 1,
+    "explanation": "Vanishing gradient problem prevents early layers from updating."
+  },
+  {
+    "id": 22,
+    "type": "fundamentals",
+    "difficulty": 3,
+    "question": "What loss function is standard for binary classification neural networks?",
+    "options": ["Mean Squared Error (MSE)", "Binary Cross-Entropy (Log Loss)", "Categorical Hinge Loss", "Huber Loss"],
+    "correct": 1,
+    "explanation": "Binary Cross-Entropy measures discrepancy between binary labels and probabilities."
+  },
+  {
+    "id": 23,
+    "type": "logic",
+    "difficulty": 3,
+    "question": "Bayes' Theorem: P(A|B) = [P(B|A) * P(A)] / P(B). If P(A)=0.1, P(B|A)=0.8, P(B)=0.2, what is P(A|B)?",
+    "options": ["0.08", "0.4", "0.25", "0.5"],
+    "correct": 1,
+    "explanation": "(0.8 * 0.1) / 0.2 = 0.08 / 0.2 = 0.4."
+  },
+  {
+    "id": 24,
+    "type": "fundamentals",
+    "difficulty": 3,
+    "question": "Which architecture mechanism allows Transformers to process relationships across tokens concurrently without recurrence?",
+    "options": ["Convolutional Kernels", "Self-Attention Mechanism", "Recurrent Gating (LSTM)", "Pooling Layers"],
+    "correct": 1,
+    "explanation": "Self-attention computes contextual representations across all sequence tokens simultaneously."
+  },
+  {
+    "id": 25,
+    "type": "logic",
+    "difficulty": 3,
+    "question": "Softmax calculation: Given logits [0, 0], what are the normalized probabilities?",
+    "options": ["[0.5, 0.5]", "[1.0, 0.0]", "[0.0, 1.0]", "[0.25, 0.75]"],
+    "correct": 0,
+    "explanation": "exp(0)/(exp(0)+exp(0)) = 1/2 = 0.5 for both elements."
+  },
+  {
+    "id": 26,
+    "type": "fundamentals",
+    "difficulty": 3,
+    "question": "What regularization method randomly deactivates neurons during training with probability p?",
+    "options": ["L1 Lasso", "Dropout", "L2 Ridge", "Batch Normalization"],
+    "correct": 1,
+    "explanation": "Dropout prevents co-adaptation by zeroing random activation units."
+  },
+  {
+    "id": 27,
+    "type": "fundamentals",
+    "difficulty": 3,
+    "question": "What does L1 regularization (Lasso) encourage in model weights?",
+    "options": ["Sparsity (setting weights to exactly 0)", "Uniform weight distribution", "Large weights", "Infinite gradients"],
+    "correct": 0,
+    "explanation": "L1 penalty drives feature weights to zero, acting as feature selection."
+  },
+  {
+    "id": 28,
+    "type": "logic",
+    "difficulty": 3,
+    "question": "Convolutional layer output size: Input 28x28, Kernel 3x3, Stride 1, Padding 0. What is output spatial dimension?",
+    "options": ["28x28", "26x26", "25x25", "14x14"],
+    "correct": 1,
+    "explanation": "(W - K + 2P)/S + 1 = (28 - 3 + 0)/1 + 1 = 26."
+  },
+  {
+    "id": 29,
+    "type": "fundamentals",
+    "difficulty": 3,
+    "question": "What optimization algorithm adapts per-parameter learning rates using first and second moments of gradients?",
+    "options": ["SGD with Momentum", "Adam Optimizer", "RMSprop", "AdaGrad"],
+    "correct": 1,
+    "explanation": "Adam combines Adaptive Gradient (AdaGrad) and RMSprop ideas."
+  },
+  {
+    "id": 30,
+    "type": "fundamentals",
+    "difficulty": 3,
+    "question": "In Reinforcement Learning, what equation expresses the optimal action-value function Q*(s, a) recursively?",
+    "options": ["Bellman Optimality Equation", "Euler-Lagrange Equation", "Navier-Stokes Equation", "Schrödinger Equation"],
+    "correct": 0,
+    "explanation": "The Bellman Equation decomposes current reward and discounted expected future value."
+  }
+]

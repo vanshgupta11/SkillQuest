@@ -1,0 +1,272 @@
+[
+  {
+    "id": 1,
+    "type": "logic",
+    "difficulty": 1,
+    "question": "Which sequence correctly completes the pattern: 2, 4, 8, 16, __?",
+    "options": ["24", "32", "30", "64"],
+    "correct": 1,
+    "explanation": "Each number doubles the previous term (powers of 2)."
+  },
+  {
+    "id": 2,
+    "type": "fundamentals",
+    "difficulty": 1,
+    "question": "Which HTML tag is used to define the root document structure?",
+    "options": ["<body>", "<html>", "<head>", "<root>"],
+    "correct": 1,
+    "explanation": "<html> element wraps all content on the page."
+  },
+  {
+    "id": 3,
+    "type": "fundamentals",
+    "difficulty": 1,
+    "question": "What CSS property changes text color?",
+    "options": ["text-color", "font-style", "color", "background-color"],
+    "correct": 2,
+    "explanation": "The 'color' property sets text foreground color in CSS."
+  },
+  {
+    "id": 4,
+    "type": "logic",
+    "difficulty": 1,
+    "question": "If Red=1, Green=2, Blue=3, and Yellow=4, what is the value of (Blue + Yellow) * Red?",
+    "options": ["7", "12", "5", "8"],
+    "correct": 0,
+    "explanation": "(3 + 4) * 1 = 7."
+  },
+  {
+    "id": 5,
+    "type": "fundamentals",
+    "difficulty": 1,
+    "question": "Which HTTP method is primarily used to retrieve data from a server?",
+    "options": ["POST", "PUT", "DELETE", "GET"],
+    "correct": 3,
+    "explanation": "GET requests are used to retrieve resources."
+  },
+  {
+    "id": 6,
+    "type": "fundamentals",
+    "difficulty": 1,
+    "question": "In JavaScript, which keyword declares a block-scoped reassignable variable?",
+    "options": ["var", "let", "const", "static"],
+    "correct": 1,
+    "explanation": "'let' allows reassignable block-scoped variables."
+  },
+  {
+    "id": 7,
+    "type": "logic",
+    "difficulty": 1,
+    "question": "Look at the pattern: A1, B2, C4, D8, __. What comes next?",
+    "options": ["E10", "E16", "F16", "E12"],
+    "correct": 1,
+    "explanation": "Letters advance by 1 (E), numbers double (16)."
+  },
+  {
+    "id": 8,
+    "type": "fundamentals",
+    "difficulty": 1,
+    "question": "What format does JSON stand for?",
+    "options": ["JavaScript Object Notation", "Java Structured Object Syntax", "JS Open Network", "JavaScript Online Node"],
+    "correct": 0,
+    "explanation": "JSON stands for JavaScript Object Notation."
+  },
+  {
+    "id": 9,
+    "type": "fundamentals",
+    "difficulty": 1,
+    "question": "Which status code represents a successful HTTP request?",
+    "options": ["404", "500", "200", "301"],
+    "correct": 2,
+    "explanation": "200 OK signifies success."
+  },
+  {
+    "id": 10,
+    "type": "logic",
+    "difficulty": 1,
+    "question": "Which shape logically follows: Circle, Triangle, Square, Pentagon, __?",
+    "options": ["Octagon", "Hexagon", "Nonagon", "Heptagon"],
+    "correct": 1,
+    "explanation": "Shapes increase by 1 side: 0/curve, 3, 4, 5, 6 (Hexagon)."
+  },
+  {
+    "id": 11,
+    "type": "fundamentals",
+    "difficulty": 2,
+    "question": "In Express.js, what parameter signatures define error-handling middleware?",
+    "options": ["(req, res, next)", "(err, req, res, next)", "(err, res)", "(req, res, err)"],
+    "correct": 1,
+    "explanation": "Express error handlers require 4 parameters: (err, req, res, next)."
+  },
+  {
+    "id": 12,
+    "type": "fundamentals",
+    "difficulty": 2,
+    "question": "What is the primary role of the useEffect hook in React?",
+    "options": ["Direct DOM manipulation", "Performing side effects in function components", "Replacing Redux store", "Enforcing CSS styles"],
+    "correct": 1,
+    "explanation": "useEffect handles side effects like data fetching and subscriptions."
+  },
+  {
+    "id": 13,
+    "type": "logic",
+    "difficulty": 2,
+    "question": "Complete the logic grid: [3, 9], [4, 16], [5, 25], [6, __]?",
+    "options": ["30", "36", "42", "48"],
+    "correct": 1,
+    "explanation": "Second element is the square of the first number (6^2 = 36)."
+  },
+  {
+    "id": 14,
+    "type": "fundamentals",
+    "difficulty": 2,
+    "question": "In Mongoose, how do you define an explicit reference to another collection schema?",
+    "options": ["type: Schema.Types.ObjectId, ref: 'ModelName'", "type: String, foreign: true", "referenceTo: 'ModelName'", "link: Schema.ObjectId"],
+    "correct": 0,
+    "explanation": "Schema.Types.ObjectId with ref specifies a model reference."
+  },
+  {
+    "id": 15,
+    "type": "fundamentals",
+    "difficulty": 2,
+    "question": "What does CORS stand for in Web API security?",
+    "options": ["Cross-Origin Resource Sharing", "Centralized Open Routing Standard", "Client-Oriented Response Protocol", "Cross-Object Request Socket"],
+    "correct": 0,
+    "explanation": "CORS = Cross-Origin Resource Sharing."
+  },
+  {
+    "id": 16,
+    "type": "logic",
+    "difficulty": 2,
+    "question": "If all A are B, and no B are C, which statement MUST be true?",
+    "options": ["All A are C", "No A are C", "Some A are C", "Some B are A and C"],
+    "correct": 1,
+    "explanation": "Since A is inside B, and B doesn't overlap C, A cannot overlap C."
+  },
+  {
+    "id": 17,
+    "type": "fundamentals",
+    "difficulty": 2,
+    "question": "What is the event loop's main purpose in Node.js?",
+    "options": ["Multi-thread execution", "Handling non-blocking asynchronous I/O operations", "Parsing HTML templates", "Encrypting passwords"],
+    "correct": 1,
+    "explanation": "The event loop manages async callbacks on a single thread."
+  },
+  {
+    "id": 18,
+    "type": "fundamentals",
+    "difficulty": 2,
+    "question": "Which HTTP header carries a Bearer JWT token?",
+    "options": ["Content-Type", "Authorization", "X-API-Key", "Accept-Encoding"],
+    "correct": 1,
+    "explanation": "Authorization header with 'Bearer <token>'."
+  },
+  {
+    "id": 19,
+    "type": "logic",
+    "difficulty": 2,
+    "question": "Pattern analysis: 10, 11, 13, 16, 20, __. What is the next number?",
+    "options": ["24", "25", "26", "27"],
+    "correct": 1,
+    "explanation": "Differences between consecutive terms are +1, +2, +3, +4, so +5 yields 25."
+  },
+  {
+    "id": 20,
+    "type": "fundamentals",
+    "difficulty": 2,
+    "question": "In React, what property must be unique when rendering a dynamic list of elements?",
+    "options": ["id", "key", "index", "ref"],
+    "correct": 1,
+    "explanation": "The 'key' prop helps React identify modified or reordered items."
+  },
+  {
+    "id": 21,
+    "type": "fundamentals",
+    "difficulty": 3,
+    "question": "What happens during a React Virtual DOM reconciliation pass?",
+    "options": ["Re-renders the entire browser window", "Diffs current VDOM against previous VDOM to batch minimal real DOM updates", "Executes database queries", "Compiles JSX to binary"],
+    "correct": 1,
+    "explanation": "Reconciliation computes minimal diffs to update real DOM efficiently."
+  },
+  {
+    "id": 22,
+    "type": "fundamentals",
+    "difficulty": 3,
+    "question": "Which Mongoose query method populates referenced documents dynamically?",
+    "options": [".join()", ".populate()", ".lookup()", ".expand()"],
+    "correct": 1,
+    "explanation": ".populate('fieldName') replaces ObjectIds with actual documents."
+  },
+  {
+    "id": 23,
+    "type": "logic",
+    "difficulty": 3,
+    "question": "System state matrix: State 0 -> Event A -> State 1; State 1 -> Event B -> State 2; State 2 -> Event A -> State 1. Starting at State 0, sequence A, B, A, B leads to which state?",
+    "options": ["State 0", "State 1", "State 2", "Invalid"],
+    "correct": 2,
+    "explanation": "0 --A--> 1 --B--> 2 --A--> 1 --B--> 2."
+  },
+  {
+    "id": 24,
+    "type": "fundamentals",
+    "difficulty": 3,
+    "question": "What is the key difference between optimistic and pessimistic locking in database concurrency?",
+    "options": ["Optimistic uses records; pessimistic uses files", "Optimistic checks for conflicts on write; pessimistic locks records during read", "Pessimistic is faster for high contention", "Optimistic prevents read operations"],
+    "correct": 1,
+    "explanation": "Optimistic assumes no collision until commit; pessimistic locks resources up front."
+  },
+  {
+    "id": 25,
+    "type": "logic",
+    "difficulty": 3,
+    "question": "Binary logic: If P=1, Q=0, R=1, what is the output of (P AND Q) OR (P AND R)?",
+    "options": ["0", "1", "Undefined", "-1"],
+    "correct": 1,
+    "explanation": "(1 AND 0) OR (1 AND 1) = 0 OR 1 = 1."
+  },
+  {
+    "id": 26,
+    "type": "fundamentals",
+    "difficulty": 3,
+    "question": "What does the HTTP 429 status code indicate?",
+    "options": ["Too Many Requests (Rate Limiting)", "Gateway Timeout", "Unprocessable Entity", "Conflict"],
+    "correct": 0,
+    "explanation": "429 Too Many Requests indicates rate limits exceeded."
+  },
+  {
+    "id": 27,
+    "type": "fundamentals",
+    "difficulty": 3,
+    "question": "In Web Security, what attack does the SameSite cookie attribute mitigate?",
+    "options": ["SQL Injection", "Cross-Site Request Forgery (CSRF)", "Buffer Overflow", "Man-in-the-Middle"],
+    "correct": 1,
+    "explanation": "SameSite cookies prevent cross-site request forgery attacks."
+  },
+  {
+    "id": 28,
+    "type": "logic",
+    "difficulty": 3,
+    "question": "Matrix pattern: Row 1 [2, 4, 8], Row 2 [3, 9, 27], Row 3 [5, 25, __]?",
+    "options": ["100", "125", "50", "625"],
+    "correct": 1,
+    "explanation": "Row elements are [x, x^2, x^3]. 5^3 = 125."
+  },
+  {
+    "id": 29,
+    "type": "fundamentals",
+    "difficulty": 3,
+    "question": "What is the purpose of Node.js cluster module?",
+    "options": ["Distributed database clustering", "Forking multiple worker processes to share server ports across CPU cores", "Caching API routes in RAM", "Managing NPM dependencies"],
+    "correct": 1,
+    "explanation": "Cluster enables multi-core utilization by spawning worker processes."
+  },
+  {
+    "id": 30,
+    "type": "fundamentals",
+    "difficulty": 3,
+    "question": "In React 18, what hook is used to defer non-urgent state updates?",
+    "options": ["useDeferredValue", "useMemo", "useTransition", "useId"],
+    "correct": 0,
+    "explanation": "useDeferredValue defers updating less urgent parts of UI."
+  }
+]
