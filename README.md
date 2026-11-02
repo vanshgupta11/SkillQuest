@@ -17,6 +17,20 @@
 
 ---
 
+## 📌 Latest Updates (v2.0)
+
+**Recent Feature Additions:**
+- ✨ **Study Rooms (Real-time Collaboration)**: Create and join study rooms with WebRTC-enabled group audio sessions, live chat, and synchronized module learning
+- 🏅 **Leaderboard System**: Top learner rankings with All-Time vs Weekly filters, podium displays, and tier-based filtering
+- 📝 **Peer Review Hub**: Submit capstone projects with tech stack tags, community upvoting, 1–5 star review system, and reviewer feedback
+- 👤 **User Profile Dashboard**: Personalized profile pages with 52-week activity heatmap, tier badge, streak counter, and customizable bio
+- 📚 **Interactive Quiz Mode**: Full 10-question adaptive quiz system with real-time feedback, progress tracking, and review explanations
+- 🔐 **Enhanced Authentication**: Improved JWT-based auth with session management and secure token rotation
+- 🎯 **API Key Manager**: Multi-key Gemini API support with automatic failover and rotation mechanism
+- 📄 **Resume Analysis**: AI-powered resume parser and ATS gap analyzer to identify skill deficiencies and recommend targeted learning modules
+
+---
+
 ## 🛠️ Architecture & Tech Stack
 
 | Layer | Technology | Details |
