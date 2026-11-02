@@ -12,6 +12,10 @@ const dashboardRoutes = require('./routes/dashboard');
 const roadmapRoutes = require('./routes/roadmap');
 const courseRoutes = require('./routes/course');
 const progressRoutes = require('./routes/progress');
+const resumeRoutes = require('./routes/resume');
+const roomRoutes = require('./routes/rooms');
+const profileRoutes = require('./routes/profile');
+const peerRoutes = require('./routes/peer');
 
 const app = express();
 
@@ -27,6 +31,11 @@ app.use('/api/dashboard', dashboardRoutes);
 app.use('/api/roadmap', roadmapRoutes);
 app.use('/api/course', courseRoutes);
 app.use('/api/progress', progressRoutes);
+app.use('/api/resume', resumeRoutes);
+app.use('/api/rooms', roomRoutes);
+app.use('/api/profile', profileRoutes);
+app.use('/api/peer', peerRoutes);
+
 
 // Root endpoint
 app.get('/', (req, res) => {

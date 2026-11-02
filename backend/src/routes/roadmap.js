@@ -10,6 +10,7 @@ const XpEvent = require('../models/XpEvent');
 const { generateRoadmapWithGemini } = require('../services/geminiService');
 const { fetchVideosForModules } = require('../services/youtubeService');
 const { optionalAuth } = require('../middleware/auth');
+const { roadmapGenerateRequestSchema } = require('../utils/schemas');
 
 /**
  * POST /api/roadmap/generate
@@ -24,11 +25,16 @@ const { optionalAuth } = require('../middleware/auth');
  */
 router.post('/generate', optionalAuth, async (req, res) => {
   try {
-    const { goal, userId } = req.body;
-
-    if (!goal || typeof goal !== 'string' || goal.trim().length < 5) {
-      return res.status(400).json({ message: 'A valid learning goal (minimum 5 characters) is required.' });
+    const parsed = roadmapGenerateRequestSchema.safeParse(req.body);
+    if (!parsed.success) {
+      return res.status(400).json({
+        message: parsed.error.errors.map((e) => e.message).join(', '),
+      });
     }
+
+    const { goal } = parsed.data;
+    const { userId } = req.body;
+
 
     // Resolve user ID & tier from auth token or fallback
     let currentTier = 'Beginner';
@@ -46,12 +52,13 @@ router.post('/generate', optionalAuth, async (req, res) => {
         demoUser = await User.create({
           fullName: 'Demo User',
           email: 'demo@skillquest.io',
-          password: 'demopassword123',
+          passwordHash: 'hashed_demo_pw_2026',
           currentTier: 'Beginner',
         });
       }
       resolvedUserId = demoUser._id;
       currentTier = demoUser.currentTier;
+
     }
 
     console.log(`[Roadmap] Generating for goal: "${goal.trim()}" | Tier: ${currentTier}`);

@@ -6,6 +6,23 @@ const User = require('../models/User');
 const { protect, JWT_SECRET } = require('../middleware/auth');
 const { computeLevel } = require('../services/xpEngine');
 
+/**
+ * Determine if the user's streak is still alive.
+ * Returns the effective streakDays (0 if streak is broken).
+ */
+function getEffectiveStreak(user) {
+  if (!user.lastActiveAt) return 0;
+  const now = new Date();
+  const lastActive = new Date(user.lastActiveAt);
+  const msSinceLast = now - lastActive;
+  const daysSinceLast = msSinceLast / (1000 * 60 * 60 * 24);
+  // Streak is alive if active within ~48 hours (today or yesterday)
+  if (daysSinceLast <= 2) {
+    return user.streakDays || 0;
+  }
+  return 0;
+}
+
 // @route   POST /api/auth/register
 // @desc    Register a new user with email, fullName, and password
 router.post('/register', async (req, res) => {
@@ -93,6 +110,7 @@ router.post('/login', async (req, res) => {
     );
 
     const levelStats = computeLevel(user.totalXp);
+    const effectiveStreak = getEffectiveStreak(user);
 
     res.json({
       message: 'Logged in successfully',
@@ -104,8 +122,9 @@ router.post('/login', async (req, res) => {
         currentTier: user.currentTier,
         totalXp: user.totalXp,
         level: levelStats.level,
-        streakDays: user.streakDays,
+        streakDays: effectiveStreak,
         progressPercent: levelStats.progressPercent,
+        lastActiveAt: user.lastActiveAt,
       },
     });
   } catch (error) {
@@ -123,6 +142,7 @@ router.get('/me', protect, async (req, res) => {
     }
 
     const levelStats = computeLevel(user.totalXp);
+    const effectiveStreak = getEffectiveStreak(user);
 
     res.json({
       user: {
@@ -132,10 +152,11 @@ router.get('/me', protect, async (req, res) => {
         currentTier: user.currentTier,
         totalXp: user.totalXp,
         level: levelStats.level,
-        streakDays: user.streakDays,
+        streakDays: effectiveStreak,
         progressPercent: levelStats.progressPercent,
         xpToNextLevel: levelStats.xpForNextLevel - user.totalXp,
         createdAt: user.createdAt,
+        lastActiveAt: user.lastActiveAt,
       },
     });
   } catch (error) {

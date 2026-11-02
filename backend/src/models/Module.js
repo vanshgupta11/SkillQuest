@@ -9,6 +9,27 @@ const resourceSchema = new mongoose.Schema(
   { _id: false }
 );
 
+const keyConceptSchema = new mongoose.Schema(
+  {
+    heading: { type: String, required: true },
+    explanation: { type: String, required: true },
+    subpoints: [{ type: String }],
+    practicalTakeaway: { type: String },
+  },
+  { _id: false }
+);
+
+const quizQuestionSchema = new mongoose.Schema(
+  {
+    id: { type: Number },
+    question: { type: String, required: true },
+    options: [{ type: String }],
+    answer: { type: String, required: true },
+    explanation: { type: String },
+  },
+  { _id: false }
+);
+
 const moduleSchema = new mongoose.Schema(
   {
     roadmapId: {
@@ -39,6 +60,34 @@ const moduleSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
+
+    // Detailed Module Content (Persisted on first generation)
+    isGenerated: {
+      type: Boolean,
+      default: false,
+    },
+    summary: {
+      type: String,
+    },
+    adaptedDepth: {
+      type: String,
+    },
+    userTier: {
+      type: String,
+    },
+    keyConcepts: [keyConceptSchema],
+    detailedContent: {
+      type: String,
+    },
+    codeExample: {
+      type: String,
+    },
+    codeExplanation: {
+      type: String,
+    },
+    bestPractices: [{ type: String }],
+    commonPitfalls: [{ type: String }],
+    quiz: [quizQuestionSchema],
   },
   { timestamps: true }
 );

@@ -2,25 +2,39 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/User');
 const XpEvent = require('../models/XpEvent');
+const ModuleProgress = require('../models/ModuleProgress');
+const Module = require('../models/Module');
 const { computeLevel } = require('../services/xpEngine');
+const { protect, optionalAuth } = require('../middleware/auth');
 
 // @route   GET /api/dashboard/stats
-// @desc    User stats + level progress
-router.get('/stats', async (req, res) => {
+// @desc    User stats + level progress (auth-aware)
+router.get('/stats', optionalAuth, async (req, res) => {
   try {
     const { userId } = req.query;
+    const resolvedId = req.user?.id || userId;
 
     let user = null;
-    if (userId) {
-      user = await User.findById(userId).select('-passwordHash');
+    if (resolvedId) {
+      user = await User.findById(resolvedId).select('-passwordHash');
     }
     if (!user) {
       user = await User.findOne({ email: 'demo@skillforge.io' }).select('-passwordHash');
     }
 
     const totalXp = user?.totalXp ?? 0;
-    const streakDays = user?.streakDays ?? 0;
+
+    // ── Streak: show 0 if streak is broken ──
+    let streakDays = user?.streakDays ?? 0;
+    if (user?.lastActiveAt) {
+      const msSinceLast = Date.now() - new Date(user.lastActiveAt).getTime();
+      if (msSinceLast > 48 * 60 * 60 * 1000) streakDays = 0;
+    }
+
     const { level, progressPercent, xpForCurrentLevel, xpForNextLevel } = computeLevel(totalXp);
+
+    // Completed modules count
+    const completedModules = user ? await ModuleProgress.countDocuments({ userId: user._id, status: 'completed' }) : 0;
 
     // Recent XP events
     let recentActivity = [];
@@ -53,7 +67,7 @@ router.get('/stats', async (req, res) => {
         xpForNextLevel,
         xpToNextLevel: xpForNextLevel - totalXp,
         streakDays,
-        completedModules: 0,
+        completedModules,
         totalModules: 12,
         recentActivity,
       },
@@ -64,47 +78,84 @@ router.get('/stats', async (req, res) => {
 });
 
 // @route   GET /api/dashboard/leaderboard
-// @desc    Top 10 users by totalXp via MongoDB aggregation
+// @desc    Top users by totalXp — supports ?period=weekly|alltime
 router.get('/leaderboard', async (req, res) => {
+  const { period = 'alltime', limit = 10 } = req.query;
   try {
-    const leaderboard = await User.aggregate([
-      { $match: { totalXp: { $gt: 0 } } },
-      {
-        $project: {
-          email: 1,
-          totalXp: 1,
-          level: 1,
-          streakDays: 1,
-          currentTier: 1,
-          // Mask email for privacy: show only first 2 chars + domain
-          displayName: {
-            $concat: [
-              { $substr: ['$email', 0, 2] },
-              '***@',
-              { $arrayElemAt: [{ $split: ['$email', '@'] }, 1] },
-            ],
+    let leaderboard;
+
+    if (period === 'weekly') {
+      // Weekly: sum XP events from the past 7 days
+      const weekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+      const weeklyXp = await XpEvent.aggregate([
+        { $match: { createdAt: { $gte: weekAgo } } },
+        { $group: { _id: '$userId', weeklyXp: { $sum: '$amount' } } },
+        { $sort: { weeklyXp: -1 } },
+        { $limit: parseInt(limit) },
+        {
+          $lookup: {
+            from: 'users',
+            localField: '_id',
+            foreignField: '_id',
+            as: 'user',
           },
         },
-      },
-      { $sort: { totalXp: -1 } },
-      { $limit: 10 },
-    ]);
+        { $unwind: '$user' },
+        {
+          $project: {
+            weeklyXp: 1,
+            email: '$user.email',
+            fullName: '$user.fullName',
+            level: '$user.level',
+            currentTier: '$user.currentTier',
+            streakDays: '$user.streakDays',
+          },
+        },
+      ]);
 
-    res.json({
-      status: 'success',
-      leaderboard: leaderboard.map((u, i) => ({
+      leaderboard = weeklyXp.map((u, i) => ({
         rank: i + 1,
-        displayName: u.displayName,
+        displayName: u.fullName || maskEmail(u.email),
+        totalXp: u.weeklyXp,
+        level: u.level || 1,
+        streakDays: u.streakDays || 0,
+        currentTier: u.currentTier,
+      }));
+    } else {
+      // All-time leaderboard
+      const users = await User.aggregate([
+        { $match: { totalXp: { $gt: 0 } } },
+        {
+          $project: {
+            email: 1, fullName: 1, totalXp: 1, level: 1,
+            streakDays: 1, currentTier: 1,
+          },
+        },
+        { $sort: { totalXp: -1 } },
+        { $limit: parseInt(limit) },
+      ]);
+
+      leaderboard = users.map((u, i) => ({
+        rank: i + 1,
+        displayName: u.fullName || maskEmail(u.email),
         totalXp: u.totalXp,
         level: u.level || 1,
         streakDays: u.streakDays || 0,
         currentTier: u.currentTier,
-      })),
-    });
+      }));
+    }
+
+    res.json({ status: 'success', leaderboard, period });
   } catch (err) {
     res.status(500).json({ message: 'Error fetching leaderboard', error: err.message });
   }
 });
+
+function maskEmail(email) {
+  if (!email) return 'Anonymous';
+  const [name, domain] = email.split('@');
+  return `${name.slice(0, 2)}***@${domain}`;
+}
 
 function formatRelativeTime(date) {
   const diff = Date.now() - new Date(date).getTime();
