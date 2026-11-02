@@ -72,7 +72,9 @@ SkillQuest/
 │   │   │   ├── youtubeService.js     # YouTube search integration
 │   │   │   └── xpEngine.js           # XP formula, tier levels, & streak multipliers
 │   │   ├── utils/
-│   │   │   └── apiKeyManager.js      # KeyRotator supporting multi-key failover
+│   │   │   ├── apiKeyManager.js      # KeyRotator supporting multi-key failover
+│   │   │   ├── resumeExtractor.js    # Resume text extraction and parsing utilities
+│   │   │   └── schemas.js            # Validation schemas for API requests
 │   │   └── server.js                 # Express server configuration
 │   ├── .env
 │   └── package.json
@@ -81,6 +83,7 @@ SkillQuest/
     ├── src/
     │   ├── components/
     │   │   ├── Navbar.jsx            # Sticky navigation with live streak flame & user menu
+    │   │   ├── ResumeAnalyzer.jsx    # Resume upload and ATS gap analysis component
     │   │   ├── ActivityHeatmap.jsx   # GitHub-style 52-week annual activity heatmap
     │   │   └── XpToast.jsx           # Animated floating XP bounty notifications
     │   ├── context/
@@ -160,6 +163,11 @@ SkillQuest/
 - `POST /api/peer/:id/upvote` — Upvote or remove upvote from a submission
 - `POST /api/peer/:id/review` — Submit a 1–5 star rating and feedback review
 - `GET /api/peer/my-submissions` — Fetch authenticated user's own submitted projects
+
+### Resume & ATS Analysis
+- `POST /api/resume/analyze` — Upload and analyze resume against job description
+- `POST /api/resume/generate-remedial` — Generate targeted learning modules based on skill gaps
+- `GET /api/resume/skills-report` — Retrieve skills assessment and recommended courses
 
 ---
 
